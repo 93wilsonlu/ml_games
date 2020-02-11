@@ -6,11 +6,11 @@ from games.arkanoid.communication import ( \
 )
 
 def ml_loop():
-    comm.ml_ready()
-
     last_ball_x = 0;
     filepath = os.path.join(os.path.dirname(__file__), "model.pickle")
     clf = pickle.load(open(filepath,'rb'))
+    comm.ml_ready()
+
     while True:
         scene_info = comm.get_scene_info()
 
