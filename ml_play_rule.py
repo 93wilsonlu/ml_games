@@ -1,3 +1,7 @@
+import games.arkanoid.communication as comm
+from games.arkanoid.communication import ( \
+    SceneInfo, GameStatus, PlatformAction
+)
 
 def get_next_ball_x(ball_x, ball_y, direction_right):
     now_ball_x, now_ball_y = ball_x, ball_y
